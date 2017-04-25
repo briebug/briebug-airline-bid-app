@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
 import { BidService } from '../bid.service';
 
 interface Bid {
@@ -13,7 +13,7 @@ interface Bid {
   styleUrls: ['./bid.component.css']
 
 })
-export class BidComponent implements OnInit {
+export class BidComponent implements OnInit, OnDestroy {
   bid: Bid = {};
   lowestBid: any;
   lowestUser: String;

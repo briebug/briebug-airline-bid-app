@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
 import * as io from 'socket.io-client';
 
 @Injectable()
 export class BidService {
-  private url ='https://limitless-shelf-54746.herokuapp.com';
+  private url = 'https://limitless-shelf-54746.herokuapp.com';
 
   private socket: any = io('https://limitless-shelf-54746.herokuapp.com');
 
@@ -16,7 +16,7 @@ export class BidService {
 
   getBid() {
 
-    let observable = new Observable(observer => {
+    const observable = new Observable(observer => {
       this.socket = io(this.url);
       this.socket.on('new-bid', (data) => {
         observer.next(data);
@@ -24,8 +24,8 @@ export class BidService {
 
       return () => {
         this.socket.disconnect();
-      }
-    })
+      };
+    });
 
     return observable;
 
