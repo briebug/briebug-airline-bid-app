@@ -14,7 +14,7 @@ interface Bid {
 
 })
 export class BidComponent implements OnInit {
-  bid: Bid = { name: '', price: 1300 };
+  bid: Bid = {};
   lowestBid: any;
   lowestUser: String;
   getBidSubscription: Subscription;

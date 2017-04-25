@@ -14,7 +14,7 @@
      Passenger With Lowest Bid : {{lowestUser}}
     </span>
     <br/>
-    <span style="color:red" *ngIf="lowestUser !== bid.name">You do not have the lowest bid. Would you like to drop your price?</span>
-    <span style="color:green" *ngIf="lowestUser === bid.name">You have the lowest bid!!!!</span>
+    <span style="color:red" *ngIf="bid.name && lowestUser !== bid.name">You do not have the lowest bid. Would you like to drop your price?</span>
+    <span style="color:green" *ngIf="bid.name && lowestUser === bid.name">You have the lowest bid!!!!</span>
   </div>
 </form>
