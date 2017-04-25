@@ -4,17 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { BidService } from './bid.service';
+import { BidComponent } from './bid/bid.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BidComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [BidService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

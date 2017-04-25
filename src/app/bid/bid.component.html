@@ -1,0 +1,20 @@
+<form (ngSubmit)="sendBid()" #msgForm="ngForm">
+  <div class="input-group">
+    Name:&nbsp;<input [(ngModel)]="bid.name" name="name" />
+    Bid Amount:&nbsp;<input [(ngModel)]="bid.price" name="price" />
+    <span class="input-group-btn">
+        <button class="btn btn-warning btn-sm" id="btn-bid" [disabled]="!msgForm.form.valid">Send</button>
+    </span>
+    <br/>
+    <span>
+      Lowest Bid : {{lowestBid | currency : "USD" : true}}
+    </span>
+    <br/>
+    <span>
+     Passenger With Lowest Bid : {{lowestUser}}
+    </span>
+    <br/>
+    <span style="color:red" *ngIf="lowestUser !== bid.name">You do not have the lowest bid. Would you like to drop your price?</span>
+    <span style="color:green" *ngIf="lowestUser === bid.name">You have the lowest bid!!!!</span>
+  </div>
+</form>
