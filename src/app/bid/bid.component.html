@@ -1,9 +1,9 @@
-<form (ngSubmit)="sendBid()" #msgForm="ngForm">
+<form (ngSubmit)="sendBid()">
   <div class="input-group">
     Name:&nbsp;<input [(ngModel)]="bid.name" name="name" />
     Bid Amount:&nbsp;<input [(ngModel)]="bid.price" name="price" />
     <span class="input-group-btn">
-        <button class="btn btn-warning btn-sm" id="btn-bid" [disabled]="!msgForm.form.valid">Send</button>
+        <button>Send</button>
     </span>
     <br/>
     <span>
