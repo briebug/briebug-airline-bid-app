@@ -8,7 +8,7 @@ Steps for Meet up live code session
 - ng g c bid
 - copy code from https://github.com/briebugconsulting/briebug-airline-bid-app/blob/master/src/app/bid/bid.component.ts to bid.component.ts
 - Copy HTML from https://github.com/briebugconsulting/briebug-airline-bid-app/blob/master/src/app/bid/bid.component.html to bid.component.html
-- in app.component.html relace html with <app-bid></app-bid>
+- in app.component.html relace html with app-bid
 - ng serve
 
 # AirlineSeatBidApp
