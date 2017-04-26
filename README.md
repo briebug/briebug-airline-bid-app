@@ -1,3 +1,16 @@
+Steps for Meet up live code session
+
+-  ng new app
+- cd airline-seat-bid-app
+- npm install socket.io-client —save
+- ng g s bid -m app.module.ts
+- Copy code from https://github.com/briebugconsulting/briebug-airline-bid-app/blob/master/src/app/bid.service.ts to bid.service.ts
+- ng g c bid
+- copy code from https://github.com/briebugconsulting/briebug-airline-bid-app/blob/master/src/app/bid/bid.component.ts to bid.component.ts
+- Copy HTML from https://github.com/briebugconsulting/briebug-airline-bid-app/blob/master/src/app/bid/bid.component.html to bid.component.html
+- in app.component.html relace html with <app-bid></app-bid>
+- ng serve
+
 # AirlineSeatBidApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
