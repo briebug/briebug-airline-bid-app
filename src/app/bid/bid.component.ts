@@ -23,12 +23,12 @@ export class BidComponent implements OnInit, OnDestroy {
   constructor(private bidService: BidService) { }
 
   ngOnInit() {
-    this.bidService.getInitialBid().subscribe((data: Bid) => {
+    this.bidService.getBid().subscribe((data: Bid) => {
       this.lowestBid = data.price;
       this.lowestUser = data.name;
     });
 
-    this.getBidSubscription = this.bidService.getBid().subscribe((data: Bid) => {
+    this.getBidSubscription = this.bidService.bidObserver().subscribe((data: Bid) => {
       this.lowestBid = data.price;
       this.lowestUser = data.name;
     });

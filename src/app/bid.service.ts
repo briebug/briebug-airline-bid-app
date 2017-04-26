@@ -15,6 +15,13 @@ export class BidService {
 
 
   getBid() {
+    const path = `${this.url}/bid`;
+    return this.http.get(path)
+      .map(res => res.json());
+  }
+
+
+  bidObserver() {
 
     const observable = new Observable(observer => {
       this.socket = io(this.url);
@@ -30,13 +37,6 @@ export class BidService {
     return observable;
 
   }
-
-  getInitialBid() {
-    const path = `${this.url}/bid`;
-    return this.http.get(path)
-      .map(res => res.json());
-  }
-
   saveBid(data) {
     const path = `${this.url}/bid/save`;
     return this.http.post(path, data)
