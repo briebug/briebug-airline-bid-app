@@ -9,7 +9,7 @@ import * as io from 'socket.io-client';
 export class BidService {
   private url = 'https://limitless-shelf-54746.herokuapp.com';
 
-  private socket: any = io('https://limitless-shelf-54746.herokuapp.com');
+  private socket: any = io(this.url);
 
   constructor(private http: Http) { }
 
